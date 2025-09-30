@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent Now | ANC Funtastik Party Rentals</title>
+    <link rel="icon" type="image/png" href="anc.jpg">
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Dancing+Script:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <h1>Rent Now</h1>
+    </header>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/chairs.html">Chairs & Tables</a>
+        <a href="/inflatables.html">Inflatables</a>
+        <a href="/cloth.html">Table & Chair Cloths</a>
+        <a href="/rent.html" class="active">Rent Now</a>
+    </nav>
+
+    <form id="rentForm">
+        <h2>Fill Your Rental Details</h2>
+
+        <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Your Name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" placeholder="0915 012 3982" required>
+        </div>
+
+        <div class="form-group">
+            <label for="item">Select Item</label>
+            <select id="item" onchange="previewItem()">
+                <option value="" disabled selected>Select an item</option>
+                <option value="Plastic Chair|20|folding.jpg">Folding Chair - ₱20</option>
+                <option value="Monoblock Chair|10|monobloc-w.jpg">Monoblock Chair (white)- ₱10</option>
+                <option value="Monoblock Chair|10|monobloc-r.jpg">Monoblock Chair (Red)- ₱10</option>
+                <option value="Monoblock Chair|10|monobloc-b.jpg">Monoblock Chair (Blue)- ₱10</option>
+                <option value="Round Table|170|roundtab.jpg">Round Table - ₱170</option>
+                <option value="Rectangle Table|150|rectangletab.jpg">Rectangle Table - ₱150</option>
+                <option value="Bounce House 1|500|bounce.jpg">Bounce House 1 - ₱500</option>
+                <option value="Bounce House 2|700|bounce1.jpg">Bounce House 2 - ₱700</option>
+                <option value="Water Slide 1|700|water.jpg">Water Slide 1 - ₱700</option>
+                <option value="Water Slide 2|1000|water1.jpg">Water Slide 2 - ₱1000</option>
+                <option value="Table Cloth White|30|white.jpg">Table Cloth (White) - ₱30</option>
+                <option value="Table Cloth Red|30|red.jpg">Table Cloth (Red) - ₱30</option>
+                <option value="Table Cloth Blue|30|blue.jpg">Table Cloth (Blue) - ₱30</option>
+                <option value="Chair Cover|10|wcover.jpg">Chair Cover - ₱10</option>
+                <option value="Chair Sash Red|20|red-chair.jpg">Chair Sash (Red) - ₱20</option>
+                <option value="Chair Sash Blue|20|blue-chair.jpg">Chair Sash (Blue) - ₱20</option>
+            </select>
+        </div>
+
+        <div class="item-preview" id="itemPreview" style="margin:10px 0;">
+            <img id="previewImg" src="" alt="Item Preview" style="width:150px; display:none; border:1px solid #ccc; padding:5px;">
+        </div>
+
+        <div class="form-group">
+            <label for="quantity">Quantity</label>
+            <input type="number" id="quantity" min="1" value="1">
+        </div>
+
+        <button type="button" onclick="addToCart()">Add to Cart</button>
+
+        <div class="cart">
+            <table id="cartTable">
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Item</th>
+                        <th>Price (₱)</th>
+                        <th>Quantity</th>
+                        <th>Subtotal (₱)</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <div class="total">Total: ₱<span id="totalAmount">0</span></div>
+        </div>
+
+        <button type="submit">Submit Rental Request</button>
+    </form>
+
+    <script src="js.js"></script>
+</body>
+</html>

@@ -1,0 +1,365 @@
+/* 🌸 Reset & Global */
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    line-height: 1.6;
+    background: url("bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: #FF008C;
+}
+
+/* 🌸 Header */
+header {
+    background: #FF008C;
+    color: white;
+    padding: 20px 50px;
+    text-align: center;
+    font-family: "Dancing Script", cursive;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+}
+
+/* 🌸 Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    background: #C40469;
+    font-size: larger;
+    border-radius: 0 0 20px 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 25px;
+    display: block;
+    transition: background 0.4s ease, border-radius 0.4s ease;
+    border-radius: 0;
+}
+
+nav a:hover,
+nav a.active {
+    background: #FF008C;
+    border-radius: 30px;
+}
+
+/* 🌸 Hero section (only index.html uses this) */
+.hero {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(6px);
+    color: #FF0048;
+    text-align: center;
+    padding: 120px 20px;
+    border-radius: 20px;
+    margin: 30px auto;
+    max-width: 1000px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin: 0;
+    font-family: "Dancing Script", cursive;
+}
+
+/* 🌸 Sections */
+section {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+
+/* 🌸 Service cards */
+.service-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.service-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    width: 220px;
+}
+
+.service-card i {
+    color: #FF008C;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.service-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #FF008C;
+}
+
+.service-card p {
+    color: #666;
+    font-size: 1rem;
+}
+
+.service-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+}
+
+footer {
+    background: #F7235A;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-radius: 20px 20px 0 0;
+}
+
+/* 🌸 Responsive */
+@media (max-width: 768px) {
+    .service-card {
+        width: 90%;
+    }
+}
+
+/* 🌸 Rent Page Styles */
+form#rentForm {
+    max-width: 800px;
+    margin: 40px auto;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+form#rentForm h2 {
+    color: #FF008C;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input,
+select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.cart {
+    margin-top: 30px;
+}
+
+.cart table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cart th,
+.cart td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.cart th {
+    background: #FF008C;
+    color: white;
+}
+
+.cart td button {
+    background: #FF008C;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.cart td button:hover {
+    background: #C40469;
+}
+
+.total {
+    text-align: right;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #FF008C;
+}
+
+button[type="submit"],
+button[type="button"] {
+    background: #FF008C;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    margin-top: 15px;
+}
+
+button[type="submit"]:hover,
+button[type="button"]:hover {
+    background: #C40469;
+}
+
+/* 🌸 Responsive */
+@media (max-width: 768px) {
+    .service-card {
+        width: 90%;
+    }
+
+    form#rentForm {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .cart table,
+    .cart th,
+    .cart td {
+        font-size: 0.9rem;
+    }
+}
+
+/* 🌸 Floating Rent Now Button */
+.floating-rent-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+}
+
+.floating-rent-btn a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    background: #FF008C;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    box-shadow: 0 5px 15px rgba(255, 0, 140, 0.4);
+    transition: all 0.3s ease;
+}
+
+.floating-rent-btn a:hover {
+    background: #C40469;
+    transform: scale(1.1);
+}
+
+/* 🌸 Gallery Styles */
+.gallery {
+    max-width: 1100px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.gallery-item {
+    flex: 1 1 calc(33% - 20px);
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.gallery-item:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Back button */
+.back-btn {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.back-btn a {
+    text-decoration: none;
+    background: #FF008C;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.back-btn a:hover {
+    background: #C40469;
+    transform: scale(1.05);
+}
+
+#welcomeOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 0, 140, 0.95); /* matches your theme */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+.welcome-content {
+    text-align: center;
+    color: white;
+}
+
+.welcome-content h1 {
+    font-family: "Dancing Script", cursive;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.welcome-content p {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2rem;
+}
+
+/* Fade out animation */
+#welcomeOverlay.hide {
+    opacity: 0;
+    pointer-events: none;
+}
